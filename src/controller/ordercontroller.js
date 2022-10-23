@@ -163,7 +163,7 @@ const updateOrder = async (req, res) => {
         { $set: { status: status } },
         { new: true })
 
-        return res.status(200).send({ status: false, message: 'Success', data: updatedOrder })
+        return res.status(200).send({ status: true, message: 'Success', data: updatedOrder })
 } catch (err) {
     return res.status(500).send({ status: false, message: err.message })
 }
